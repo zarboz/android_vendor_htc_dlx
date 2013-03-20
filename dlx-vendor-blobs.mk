@@ -23,8 +23,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/lib/libacdbloader.so:system/lib/libacdbloader.so \
   vendor/htc/dlx/proprietary/lib/libaudcal.so:system/lib/libaudcal.so \
   vendor/htc/dlx/proprietary/lib/libOpenVG.so:system/lib/libOpenVG.so \
-  vendor/htc/dlx/proprietary/lib/libmmstillomx.so:system/lib/libmmstillomx.so \
-  vendor/htc/dlx/proprietary/lib/libDxAndroidSpecific.so:system/lib/libDxAndroidSpecific.so \
+  vendor/htc/dlx/proprietary/lib/libxml.so:system/lib/libxml.so \
   vendor/htc/dlx/proprietary/etc/agps_rm:system/etc/agps_rm \
   vendor/htc/dlx/proprietary/bin/akmd:system/bin/akmd \
   vendor/htc/dlx/proprietary/bin/ATFWD-daemon:system/bin/ATFWD-daemon \
@@ -32,12 +31,15 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/bin/bma150_usr:system/bin/bma150_usr \
   vendor/htc/dlx/proprietary/bin/charging:system/bin/charging \
   vendor/htc/dlx/proprietary/bin/ds_fmc_appd:system/bin/ds_fmc_appd \
+  vendor/htc/dlx/proprietary/bin/dmagent:system/bin/dmagent \
   vendor/htc/dlx/proprietary/bin/DxDrmServerIpc:system/bin/DxDrmServerIpc \
   vendor/htc/dlx/proprietary/bin/efsks:system/bin/efsks \
   vendor/htc/dlx/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
   vendor/htc/dlx/proprietary/bin/hcheck:system/bin/hcheck \
   vendor/htc/dlx/proprietary/bin/hdmid:system/bin/hdmid \
   vendor/htc/dlx/proprietary/bin/ks:system/bin/ks \
+  vendor/htc/dlx/proprietary/bin/l2_profile_exchange:system/bin/l2_profile_exchange \
+  vendor/htc/dlx/proprietary/bin/mm-qcamera-app:system/bin/mm-qcamera-app \
   vendor/htc/dlx/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
   vendor/htc/dlx/proprietary/bin/mpdecision:system/bin/mpdecision \
   vendor/htc/dlx/proprietary/bin/mm-pp-daemon:system/bin/mm-pp-daemon \
@@ -54,8 +56,6 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/bin/usbhub:system/bin/usbhub \
   vendor/htc/dlx/proprietary/bin/usbhub_init:system/bin/usbhub_init \
   vendor/htc/dlx/proprietary/bin/v4l2-qcamera-app:system/bin/v4l2-qcamera-app \
-  vendor/htc/dlx/proprietary/lib/libacdbloader.so:system/lib/libacdbloader.so \
-  vendor/htc/dlx/proprietary/lib/libaudcal.so:system/lib/libaudcal.so \
   vendor/htc/dlx/proprietary/lib/libc2d2_a3xx.so:system/lib/libc2d2_a3xx.so \
   vendor/htc/dlx/proprietary/lib/libc2d2_z180.so:system/lib/libc2d2_z180.so \
   vendor/htc/dlx/proprietary/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
@@ -95,20 +95,12 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/lib/libchromatix_s5k3h2yx_hfr.so:system/lib/libchromatix_s5k3h2yx_hfr.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ar0260_preview.so:system/lib/libchromatix_ar0260_preview.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_imx175_hfr.so:system/lib/libchromatix_imx175_hfr.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k3h2yx_preview.so:system/lib/libchromatix_s5k3h2yx_preview.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ar0260_zsl.so:system/lib/libchromatix_ar0260_zsl.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_imx175_preview.so:system/lib/libchromatix_imx175_preview.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k3h2yx_zsl.so:system/lib/libchromatix_s5k3h2yx_zsl.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx074_default_video.so:system/lib/libchromatix_imx074_default_video.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_imx175_zsl.so:system/lib/libchromatix_imx175_zsl.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_s5k3l1yx_default_video.so:system/lib/libchromatix_s5k3l1yx_default_video.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx074_preview.so:system/lib/libchromatix_imx074_preview.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_ov2720_default_video.so:system/lib/libchromatix_ov2720_default_video.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_s5k3l1yx_hfr_120fps.so:system/lib/libchromatix_s5k3l1yx_hfr_120fps.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx074_video_hd.so:system/lib/libchromatix_imx074_video_hd.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_ov2720_preview.so:system/lib/libchromatix_ov2720_preview.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_s5k3l1yx_hfr_60fps.so:system/lib/libchromatix_s5k3l1yx_hfr_60fps.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx074_zsl.so:system/lib/libchromatix_imx074_zsl.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ov2722_default_video.so:system/lib/libchromatix_ov2722_default_video.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_s5k3l1yx_hfr_90fps.so:system/lib/libchromatix_s5k3l1yx_hfr_90fps.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_imx091_default_video.so:system/lib/libchromatix_imx091_default_video.so \
@@ -122,34 +114,28 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/lib/libchromatix_s5k3l1yx_zsl.so:system/lib/libchromatix_s5k3l1yx_zsl.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_imx091_zsl.so:system/lib/libchromatix_imx091_zsl.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ov8838_default_video.so:system/lib/libchromatix_ov8838_default_video.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k6a1gx_default_video.so:system/lib/libchromatix_s5k6a1gx_default_video.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx135_default_video.so:system/lib/libchromatix_imx135_default_video.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ov8838_hdr.so:system/lib/libchromatix_ov8838_hdr.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k6a1gx_hdr.so:system/lib/libchromatix_s5k6a1gx_hdr.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx135_hdr.so:system/lib/libchromatix_imx135_hdr.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ov8838_hfr.so:system/lib/libchromatix_ov8838_hfr.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k6a1gx_hfr.so:system/lib/libchromatix_s5k6a1gx_hfr.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx135_hfr.so:system/lib/libchromatix_imx135_hfr.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ov8838_preview.so:system/lib/libchromatix_ov8838_preview.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k6a1gx_preview.so:system/lib/libchromatix_s5k6a1gx_preview.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx135_preview.so:system/lib/libchromatix_imx135_preview.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_ov8838_zsl.so:system/lib/libchromatix_ov8838_zsl.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k6a1gx_zsl.so:system/lib/libchromatix_s5k6a1gx_zsl.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_imx135_zsl.so:system/lib/libchromatix_imx135_zsl.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k3h2yx_default_video.so:system/lib/libchromatix_s5k3h2yx_default_video.so \
   vendor/htc/dlx/proprietary/lib/libchromatix_imx175_default_video.so:system/lib/libchromatix_imx175_default_video.so \
-  vendor/htc/dlx/proprietary/lib/libchromatix_s5k3h2yx_hdr.so:system/lib/libchromatix_s5k3h2yx_hdr.so \
   vendor/htc/dlx/proprietary/lib/libmm-color-convertor.so:system/lib/libmm-color-convertor.so \
   vendor/htc/dlx/proprietary/lib/libwvm.so:system/lib/libwvm.so \
   vendor/htc/dlx/proprietary/lib/libdrmwvmplugin.so:system/lib/libdrmwvmplugin.so \
   vendor/htc/dlx/proprietary/lib/libwvdrm_L1.so:system/lib/libwvdrm_L1.so \
   vendor/htc/dlx/proprietary/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
+  vendor/htc/dlx/proprietary/lib/libI420colorconvert.so:system/lib/libI420colorconvert.so \
   vendor/htc/dlx/proprietary/lib/libmmmpo.so:system/lib/libmmmpo.so \
   vendor/htc/dlx/proprietary/lib/libmmmpod.so:system/lib/libmmmpod.so \
   vendor/htc/dlx/proprietary/lib/libgnmc_aactag.2.5.9.4.so:system/lib/libgnmc_aactag.2.5.9.4.so \
   vendor/htc/dlx/proprietary/lib/libgnmc_decoder.2.5.9.4.so:system/lib/libgnmc_decoder.2.5.9.4.so \
   vendor/htc/dlx/proprietary/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
   vendor/htc/dlx/proprietary/lib/libdivxdrmdecrypt.so:system/lib/libdivxdrmdecrypt.so \
+  vendor/htc/dlx/proprietary/lib/libDxAndroidSpecific.so:system/lib/libDxAndroidSpecific.so \
+  vendor/htc/dlx/proprietary/lib/libimage-jpeg-dec-omx-comp.so:system/lib/libimage-jpeg-dec-omx-comp.so \
+  vendor/htc/dlx/proprietary/lib/libimage-jpeg-enc-omx-comp.so:system/lib/libimage-jpeg-enc-omx-comp.so \
+  vendor/htc/dlx/proprietary/lib/libimage-omx-common.so:system/lib/libimage-omx-common.so \
+  vendor/htc/dlx/proprietary/lib/libdrmfs.so:system/lib/libdrmfs.so \
   vendor/htc/dlx/proprietary/lib/hw/nfc.dlx.so:system/lib/hw/nfc.dlx.so \
   vendor/htc/dlx/proprietary/lib/libpn544_fw.so:system/lib/libpn544_fw.so \
   vendor/htc/dlx/proprietary/lib/libdiag.so:system/lib/libdiag.so \
@@ -209,4 +195,5 @@ PRODUCT_COPY_FILES += \
   vendor/htc/dlx/proprietary/etc/firmware/tzapps.b02:system/etc/firmware/tzapps.b02 \
   vendor/htc/dlx/proprietary/etc/firmware/tzapps.b03:system/etc/firmware/tzapps.b03 \
   vendor/htc/dlx/proprietary/etc/firmware/tzapps.mdt:system/etc/firmware/tzapps.mdt \
-  vendor/htc/dlx/proprietary/vendor/firmware/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so
+  vendor/htc/dlx/proprietary/vendor/firmware/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
+  vendor/htc/dlx/proprietary/vendor/firmware/mfg.bin:system/vendor/firmware/mfg.bin
